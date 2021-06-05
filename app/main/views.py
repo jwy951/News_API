@@ -27,3 +27,12 @@ def index():
         return redirect(url_for('main.search',article_name = search_article))
     else:
         return render_template('index.html', title = title, general = general_sources, business = business_sources, technology = technology_sources, sports = sports_sources, entertainment = entertainment_sources, health = health_sources, science = science_sources)
+
+@main.route('/articles/<source>')
+def articles(source):
+    '''
+    View articles for a specific source page function that returns the article details page and its data
+    '''
+    articles = get_articles(source)
+
+    return render_template('article.html', articles = articles)
