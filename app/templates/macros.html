@@ -7,3 +7,17 @@
             </div>
         {% endfor %}
 {% endmacro %}
+
+{% macro displayArticlesList(articles_list) %}
+    {% for article in articles_list %}
+        {%if article.image%}
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" style="padding-bottom: 10px;">
+            <img class="img-responsive" src="{{article.image}}" alt="image">
+            <h4>{{article.title}}</h4>
+            <p>{{article.description}}</p>
+            <p>Created: {{article.publishedAt}}</p>
+            <a href="{{article.url}}" class="btn btn-success">Read Full Story</a>
+        </div>
+        {%endif%}
+    {% endfor %}
+{% endmacro %}
