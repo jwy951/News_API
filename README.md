@@ -1,4 +1,6 @@
 # News App
+## Author
+Yegon C Johnstone
 ## Description
 This is an application that picks news from various sources on News Api and displays the news. The news is categorized according to source.
 ## BDD
@@ -27,8 +29,7 @@ The program redirects the user to the News article's source site for the full st
 * Flask
 * News API
 * pip
-## Contact details
-Reach me on +254 725 060 098 0r fitstargilii1194@gmail.com
+
 ### License
 MIT
 Copyright (c) 2021 **Gilbert Kiprotich**
